@@ -60,7 +60,10 @@ pipeline {
 
 def build() {
   echo "Building of node application is starting..."
-  sh "docker --version"
+  sh "docker -t mmatovski/sample-book-app ."
+
+  echo "Pushing image to docker registry..."
+  sh "docker push mmatovski/sample-book-app"
 }
 
 def deploy(String environment) {
