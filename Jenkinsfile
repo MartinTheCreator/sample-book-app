@@ -8,37 +8,51 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        build()
+        script {
+          build()
+        }
       }
     }
     stage('deploy-dev') {
       steps {
-        deploy("DEV")
+        script {
+          deploy("DEV")
+        }
       }
     }
     stage('test-dev') {
       steps {
-        test('DEV')
+        script {
+          test('DEV')
+        }
       }
     }
     stage('deploy-stg') {
       steps {
-        deploy("STG")
+        script {
+          deploy("STG")
+        }
       }
     }
     stage('test-stg') {
       steps {
-        test('STG')
+        script {
+          test('STG')
+        }
       }
     }
     stage('deploy-prd') {
       steps {
-        deploy("PRD")
+        script {
+          deploy("PRD")
+        }
       }
     }
     stage('test-prd') {
       steps {
-        test('PRD')
+        script {
+          test('PRD')
+        }
       }
     }
   }
