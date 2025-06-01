@@ -5,7 +5,7 @@ pipeline {
     stage('build') {
       steps {
         echo "Building of node application is starting..."
-        sh "home"
+        sh "echo $PATH"
       }
     }
     stage('deploy-dev') {
