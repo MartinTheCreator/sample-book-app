@@ -5,6 +5,7 @@ pipeline {
     stage('build') {
       steps {
         echo "Building of node application is starting..."
+        sh "docker -v"
       }
     }
     stage('deploy-dev') {
