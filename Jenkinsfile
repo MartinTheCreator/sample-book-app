@@ -9,7 +9,7 @@ pipeline {
     stage('build') {
       steps {
         echo "Building of node application is starting..."
-        sh "echo $PATH"
+        sh "docker --version"
       }
     }
     stage('deploy-dev') {
