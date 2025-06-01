@@ -1,6 +1,10 @@
 pipeline {
   agent any
 
+  triggers {
+    pollSCM('*/1 * * * *')
+  }
+
   /*
    * If the env path is not configured in Jenkins define it
    * within the environment structure
